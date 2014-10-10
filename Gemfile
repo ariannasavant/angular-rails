@@ -28,6 +28,7 @@ gem 'rspec-rails'
 gem 'teaspoon'
 gem 'phantomjs'
 gem 'factory_girl_rails'
+gem 'faker'
 
 # Metrics  --Need Istanbul node package installed for JS coverage reporting to work
 gem 'simplecov'
@@ -46,6 +47,6 @@ gem 'quiet_assets'
 gem 'webrick'
 
 # Heroku configs  --Comment these out if deploying somewhere else
-ruby '2.1.1'
+# ruby '2.1.1'
 gem 'rails_12factor'
 

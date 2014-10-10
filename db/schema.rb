@@ -11,10 +11,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140704194919) do
+ActiveRecord::Schema.define(version: 20141010221937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "liens", force: true do |t|
+    t.integer  "property_id"
+    t.string   "certificate_no"
+    t.decimal  "rv"
+    t.decimal  "fv"
+    t.datetime "purchase_date"
+    t.datetime "rv_date"
+    t.decimal  "interest_rate"
+    t.decimal  "penalty_rate"
+    t.decimal  "total_assesed_value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "liens_portfolios", force: true do |t|
+    t.integer  "portfolio_id"
+    t.integer  "lien_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "portfolios", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "properties", force: true do |t|
+    t.string   "street_address_1"
+    t.string   "street_address_2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.decimal  "latitude"
+    t.decimal  "longitude"
+    t.string   "parcel_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "username"

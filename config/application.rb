@@ -9,10 +9,7 @@ Bundler.require(*Rails.groups)
 module RailsAngularDevise
   # This is the container class for your application
   class Application < Rails::Application
-    #
-    # TODO: Change this to your app's name
-    #
-    config.app_name = 'My Awesome App'
+    config.app_name = 'Access Terminal'
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
