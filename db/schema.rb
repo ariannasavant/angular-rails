@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20141010221937) do
     t.datetime "rv_date"
     t.decimal  "interest_rate"
     t.decimal  "penalty_rate"
-    t.decimal  "total_assesed_value"
+    t.decimal  "total_assessed_value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20141010221937) do
   end
 
   create_table "portfolios", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -9,7 +9,7 @@ class AddLiensTable < ActiveRecord::Migration
   		t.datetime :rv_date
   		t.decimal :interest_rate
   		t.decimal :penalty_rate
-  		t.decimal :total_assesed_value
+  		t.decimal :total_assessed_value
   		t.timestamps
   	end
   end
