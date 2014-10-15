@@ -16,7 +16,6 @@ gem 'roar-rails'
 
 # Authentication/Authorization
 gem 'devise'
-gem 'cancan'
 gem 'pundit'
 # gem 'rolify'
 

@@ -13,11 +13,11 @@ Rails.application.routes.draw do
 
   # Routes for API calls only.  These shouldn't respond to HTML requests
   #
-  namespace :api do
-    namespace :v1 do
+  # namespace :api do
+    # namespace :v1 do
       resources :liens 
       resources :portfolios 
       resources :properties
-    end
-  end
+    # end
+  # end
 end
