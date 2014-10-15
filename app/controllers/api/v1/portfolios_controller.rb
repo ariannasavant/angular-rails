@@ -1,4 +1,4 @@
-class PortfoliosController < ApplicationController
+class Api::V1::PortfoliosController < ApplicationController
   include Roar::Rails::ControllerAdditions
   respond_to :json
 
