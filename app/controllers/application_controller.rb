@@ -5,6 +5,7 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
+  include Pundit
   protect_from_forgery with: :exception
 
   # Ensure we have a logged in user in all controllers
@@ -14,25 +15,25 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   # Errors and redirects for unauthorized access
-  rescue_from CanCan::AccessDenied do |exception|
-    flash[:error] = exception.message
+  # rescue_from CanCan::AccessDenied do |exception|
+  #   flash[:error] = exception.message
 
-    respond_to do |format|
-      format.html do
-        # Devise takes this and makes it the first page to load after the person logs in
-        session[:user_return_to] = request.url if !signed_in? && request.get?
-        redirect_to root_url
-      end
-      format.json do
-        render json: flash, status: :unauthorized
-        flash.delete( :error )
-      end
-      format.js do
-        render 'shared/error'
-        flash.delete( :error )
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     format.html do
+  #       # Devise takes this and makes it the first page to load after the person logs in
+  #       session[:user_return_to] = request.url if !signed_in? && request.get?
+  #       redirect_to root_url
+  #     end
+  #     format.json do
+  #       render json: flash, status: :unauthorized
+  #       flash.delete( :error )
+  #     end
+  #     format.js do
+  #       render 'shared/error'
+  #       flash.delete( :error )
+  #     end
+  #   end
+  # end
 
   protected
 

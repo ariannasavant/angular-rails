@@ -15,15 +15,9 @@ Rails.application.routes.draw do
   #
   namespace :api do
     namespace :v1 do
-      resources :liens do
-
-      end
-      resources :portfolios do
-
-      end
-      resources :properties do
-
-      end
+      resources :liens 
+      resources :portfolios 
+      resources :properties
     end
   end
 end

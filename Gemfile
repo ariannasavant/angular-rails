@@ -12,10 +12,13 @@ gem 'jbuilder', '~> 2.0'
 # My preferred gems:
 gem 'pg'
 gem 'bootstrap-sass'
+gem 'roar-rails'
 
 # Authentication/Authorization
 gem 'devise'
 gem 'cancan'
+gem 'pundit'
+# gem 'rolify'
 
 # Angular stuff
 gem 'angularjs-rails'
